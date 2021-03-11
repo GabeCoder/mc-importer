@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=0.5
+Name=Minecraft Importer
+Comment=Import worlds and packs to Minecraft Bedrock Edition
+Exec=/home/pi/mc-importer/import.sh
+Icon=/home/pi/mc-importer/icon.png
+Terminal=false
+Categories=Game;Utility;
