@@ -6,11 +6,12 @@ then
 		yad --list --title="Minecraft Archive Guide" --text="Here is a list of archive types to help you." --column="Minecraft Archive" --column="Archive Extension" World .mcworld Addon .mcaddon "Resource/Behavior Pack" .mcpack --no-buttons &
 		yad --title="Archive Type" --text="What type of archive are you importing?" --button="World":10 --button="Addon":20 --button="Resource Pack":30 --button="Behavior Pack":40 --width=300 --height=150
 		answer=$?
+		name=$(zenity --entry --title="Name Archive" --text="What do you want to name the folder of the archive?" --entry-text="$basename")
 		if [ $answer -eq 10 ]
 		then
-			cd $HOME/.local/share/mcpelauncher/games/com.mojang/minecraftWorlds
-			mkdir "$basename"
-			unzip "$archive" -d "$basename"
+			cd "$HOME"/.local/share/mcpelauncher/games/com.mojang/minecraftWorlds
+			mkdir "$name"
+			unzip "$archive" -d "$name"
 			zenity --info --icon-name=emblem-default --title="World Imported" --text="Successfully imported $basename." --width=300
 		else
 			if [ $answer -eq 20 ]
@@ -19,16 +20,16 @@ then
 			else
 				if [ $answer -eq 30 ]
 				then
-					cd $HOME/.local/share/mcpelauncher/games/com.mojang/resource_packs
-					mkdir "$basename"
-					unzip "$archive" -d "$basename"
+					cd "$HOME"/.local/share/mcpelauncher/games/com.mojang/resource_packs
+					mkdir "$name"
+					unzip "$archive" -d "$name"
 					zenity --info --icon-name=emblem-default --title="Pack Imported" --text="Successfully imported $basename." --width=300
 				else
 					if [ $answer -eq 40 ]
 					then
-						cd $HOME/.local/share/mcpelauncher/games/com.mojang/behavior_packs
-						mkdir "$basename"
-						unzip "$archive" -d "$basename"
+						cd "$HOME"/.local/share/mcpelauncher/games/com.mojang/behavior_packs
+						mkdir "$name"
+						unzip "$archive" -d "$name"
 						zenity --info --icon-name=emblem-default --title="Pack Imported" --text="Successfully imported $basename." --width=300
 					fi
 				fi
