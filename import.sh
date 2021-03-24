@@ -1,4 +1,4 @@
-if yad --title="Minecraft Importer" --text="Welcome to the Minecraft Importer! To continue, click OK. Otherwise, click Cancel." --width=300 --height=150
+if yad --window-icon="$HOME"/mc-importer/icon.png --title="Minecraft Importer" --text="Welcome to the Minecraft Importer! To continue, click OK. Otherwise, click Cancel." --width=300 --height=150
 then
 	if archive=$(zenity --file-selection --title="Archive Selection")
 	then
