@@ -3,8 +3,8 @@ then
 	if archive=$(zenity --file-selection --title="Archive Selection")
 	then
 		basename=$(basename -a $archive)
-		yad --list --title="Minecraft Archive Guide" --text="Here is a list of archive types to help you." --column="Minecraft Archive" --column="Archive Extension" World .mcworld Addon .mcaddon "Resource/Behavior Pack" .mcpack --no-buttons &
-		yad --title="Archive Type" --text="What type of archive are you importing?" --button="World":10 --button="Addon":20 --button="Resource Pack":30 --button="Behavior Pack":40 --width=300 --height=150
+		yad --list --window-icon=package --title="Minecraft Archive Guide" --text="Here is a list of archive types to help you." --column="Minecraft Archive" --column="Archive Extension" World .mcworld Addon .mcaddon "Resource/Behavior Pack" .mcpack --no-buttons &
+		yad --window-icon=package --title="Archive Type" --text="What type of archive are you importing?" --button="World":10 --button="Addon":20 --button="Resource Pack":30 --button="Behavior Pack":40 --width=300 --height=150
 		answer=$?
 		name=$(zenity --entry --title="Name Archive" --text="What do you want to name the folder of the archive?" --entry-text="$basename")
 		if [ $answer -eq 10 ]
