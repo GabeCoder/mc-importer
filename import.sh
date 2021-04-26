@@ -13,13 +13,13 @@ then
 		mkdir "$name"
 		unzip "$archive" -d "$name"
 		zenity --info --icon-name=emblem-default --title="World Imported" --text="Successfully imported $basename." --width=300
-	elseif [ $answer == 20 ]
+	elif [ $answer == 20 ]
 	then
 		cd "$HOME"/.local/share/mcpelauncher/games/com.mojang/resource_packs
 		mkdir "$name"
 		unzip "$archive" -d "$name"
 		zenity --info --icon-name=emblem-default --title="Pack Imported" --text="Successfully imported $basename." --width=300
-	elseif [ $answer == 30 ]
+	elif [ $answer == 30 ]
 	then
 		cd "$HOME"/.local/share/mcpelauncher/games/com.mojang/behavior_packs
 		mkdir "$name"
