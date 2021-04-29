@@ -21,4 +21,5 @@ Accepted Packages:
 .mcpack (Minecraft Resource/Behavior Pack)
 
 Minecraft Importer was designed for Debian distros.
+
 ![Debian](https://user-images.githubusercontent.com/72320038/116606048-2a505780-a8fe-11eb-8df2-0f85034b92e0.png)
